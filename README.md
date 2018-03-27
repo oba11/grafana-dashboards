@@ -70,13 +70,13 @@ spec:
       mountPath: "/etc/grafana/provisioning/dashboards"
     - mountPath: /var/lib/grafana/dashboards
       name: grafana-dashboard-volume
-  - image: k8s.gcr.io/git-sync:v2.0.4
+  - image: k8s.gcr.io/git-sync:v2.0.6
     name: git-sync
-    env:
-    - name: GIT_SYNC_REPO
-      value: https://github.com/oba11/grafana-dashboards
-    - name: GIT_SYNC_DEST
-      value: /git
+    args:
+    - "-repo=https://github.com/oba11/grafana-dashboards.git"
+    - "-branch=master"
+    - "-root=/tmp/git"
+    - "-wait=30"
     volumeMounts:
     - mountPath: /git
       name: grafana-dashboard-volume
