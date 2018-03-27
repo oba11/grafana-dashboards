@@ -111,4 +111,4 @@ data:
 ## Special Thanks for Awesome Dashboards
 
 * [prometheus-operator dashboards](https://github.com/coreos/prometheus-operator/blob/master/contrib/kube-prometheus/manifests/grafana/grafana-dashboard-definitions.yaml) by CoreOS
-* [Kubernetes cluster monitoring](https://grafana.com/dashboards/315) by Instrumentisto Team
+* [Kubernetes cluster monitoring](https://grafana.com/dashboards/1621) by cjdc
